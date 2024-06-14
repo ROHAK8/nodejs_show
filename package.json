@@ -18,11 +18,11 @@
     },
     "lint-staged": {
         "**/*.js": [
-          "eslint --fix",
-          "prettier --write"
+            "eslint --fix",
+            "prettier --write"
         ],
-        "!node_modules/**/*.js": [] 
-      },
+        "!node_modules/**/*.js": []
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
