@@ -21,7 +21,7 @@
           "eslint --fix",
           "prettier --write"
         ],
-        "!node_modules/**/*.js": []  // Ensure node_modules is excluded
+        "!node_modules/**/*.js": [] 
       },
     "husky": {
         "hooks": {
