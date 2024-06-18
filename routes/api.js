@@ -5,7 +5,7 @@ const apiController = require("../controllers/apiController");
 
 // Sample route
 router.get("/", (req, res) => {
-    res.send("Hello, World!");
+  res.send("Hello, World!");
 });
 
 // Get all data
