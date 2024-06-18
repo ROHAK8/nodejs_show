@@ -19,6 +19,21 @@ exports.addData = (req, res) => {
   res.status(201).json(newData);
 };
 
+exports.checkSum = (req, res) => {
+  const { numbers, threshold } = req.body;
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+  if (sum > threshold) {
+    return res
+      .status(200)
+      .json({ message: "Sum is greater than threshold", sum });
+  } else {
+    return res
+      .status(400)
+      .json({ message: "Sum is not greater than threshold", sum });
+  }
+};
+
 // Get a single item by ID
 exports.getDataById = (req, res) => {
   const id = parseInt(req.params.id);

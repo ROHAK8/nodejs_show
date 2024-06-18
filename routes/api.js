@@ -11,6 +11,9 @@ router.get("/", (req, res) => {
 // Get all data
 router.get("/data", apiController.getAllData);
 
+// Check sum route
+router.post("/check-sum", apiController.checkSum);
+
 // Add new data
 router.post("/data", apiController.addData);
 

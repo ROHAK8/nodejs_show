@@ -1,4 +1,3 @@
-// index.js
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -13,7 +12,8 @@ const apiRoutes = require("./routes/api");
 app.use("/api", apiRoutes);
 
 // Start server
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
-//new comment
+
+module.exports = { app, server }; // Export both app and server for testing purposes
