@@ -8,7 +8,6 @@ export default defineConfig([
         languageOptions: { sourceType: "commonjs" },
         ignores: ["node_modules/", "dist/"],
         rules: {
-            // Custom rule example: disallow var, enforce let or const
             "no-var": "error",
             "camelcase": ["error", { properties: "always" }],
             "no-unused-vars": "warn",
