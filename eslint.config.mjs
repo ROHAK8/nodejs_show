@@ -6,7 +6,12 @@ import { defineConfig } from "eslint-define-config";
 export default defineConfig([
   {
     files: ["**/*.js"],
-    languageOptions: { sourceType: "commonjs" },
+    languageOptions: { 
+      sourceType: "commonjs",
+      globals: {
+        ...globals.node,
+      },
+    },
     ignores: ["node_modules/", "dist/"],
     rules: {
       "no-var": "error",
@@ -16,15 +21,11 @@ export default defineConfig([
       "quotes": ["error", "double"],
       "no-trailing-spaces": "error",
       "max-len": ["error", { code: 500 }],
+      "no-undef": "off",
     },
   },
   {
-    languageOptions: { globals: globals.browser },
-    ignores: ["node_modules/", "dist/"],
-  },
-  pluginJs.configs.recommended,
-  {
-    files: ["**/*.test.js"], // Apply these settings to test files only
+    files: ["**/*.test.js"],
     plugins: {
       jest: pluginJest,
     },
@@ -42,4 +43,5 @@ export default defineConfig([
       "jest/valid-expect": "error",
     },
   },
+  pluginJs.configs.recommended,
 ]);

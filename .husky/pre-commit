@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
-npm test
+npx jest --json --outputFile=jest-results.json
+node scripts/check-test-pass-rate.js
