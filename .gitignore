@@ -5,4 +5,4 @@ public
 build
 dist
 package-lock.json
-jest-result.json
+jest-results.json
