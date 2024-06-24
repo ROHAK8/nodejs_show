@@ -6,3 +6,4 @@ build
 dist
 package-lock.json
 test-report.html
+jest-results.json
