@@ -6,7 +6,7 @@ import { defineConfig } from "eslint-define-config";
 export default defineConfig([
   {
     files: ["**/*.js"],
-    languageOptions: { 
+    languageOptions: {
       sourceType: "commonjs",
       globals: {
         ...globals.node,
@@ -15,20 +15,20 @@ export default defineConfig([
     ignores: ["node_modules/", "dist/"],
     rules: {
       "no-var": "error",
-      "camelcase": ["error", { properties: "always" }],
+      camelcase: ["error", { properties: "always" }],
       "no-unused-vars": "warn",
-      "indent": ["error", 2],
-      "quotes": ["error", "double"],
+      indent: ["error", 2],
+      quotes: ["error", "double"],
       "no-trailing-spaces": "error",
       "max-len": ["error", { code: 500 }],
       "no-undef": "off",
     },
+    plugins: {
+      // Register plugins here
+    },
   },
   {
     files: ["**/*.test.js"],
-    plugins: {
-      jest: pluginJest,
-    },
     languageOptions: {
       globals: {
         ...globals.node,
@@ -41,6 +41,9 @@ export default defineConfig([
       "jest/no-identical-title": "error",
       "jest/prefer-to-have-length": "warn",
       "jest/valid-expect": "error",
+    },
+    plugins: {
+      jest: pluginJest,
     },
   },
   pluginJs.configs.recommended,

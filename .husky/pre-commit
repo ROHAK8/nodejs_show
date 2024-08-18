@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 npx lint-staged
 npx jest --json --outputFile=jest-results.json
 node scripts/check-test-pass-rate.js
