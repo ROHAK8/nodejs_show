@@ -41,6 +41,6 @@ exports.getDataById = (req, res) => {
   if (item) {
     res.json(item);
   } else {
-    res.status(404).json({ message: "Data not found" });
+    res.status(404).json({ message: "Data not foun" });
   }
 };
