@@ -35,7 +35,7 @@ exports.checkSum = (req, res) => {
 };
 
 // Get a single item by ID
-exports.getdataById = (req, res) => {
+exports.getDataById = (req, res) => {
   const id = parseInt(req.params.id);
   const item = data.find((d) => d.id === id);
   if (item) {
